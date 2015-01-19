@@ -74,7 +74,7 @@ register_asset "stylesheets/common/components/buttons.scss"
 
 #### Navigation
 #  Add "FAQ" to Main Navigation
-register_custom_html(extraNavItem: "<li id='faq-menu-item'><a href='/faq'>FAQ</a></li>")
+register_custom_html(extraNavItem: "<li id='faq-menu-item'><a href='/community/faq'>FAQ</a></li>")
 #  pill nav Styles and stacked nav (user/group profile page)
 #  rounded corners
 #  bordered passive state
