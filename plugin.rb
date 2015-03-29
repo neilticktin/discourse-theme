@@ -13,10 +13,10 @@
 
 after_initialize do
 
-  module MacTechDesign
+  module SitePointDesign
     class Engine < ::Rails::Engine
-      engine_name "mactech_design"
-      isolate_namespace MacTechDesign
+      engine_name "sitepoint_design"
+      isolate_namespace SitePointDesign
     end
 
     Rails.application.config.assets.paths.unshift File.expand_path('../assets', __FILE__)
