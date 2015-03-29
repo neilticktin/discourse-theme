@@ -13,10 +13,10 @@
 
 after_initialize do
 
-  module SitepointDesign
+  module MacTechDesign
     class Engine < ::Rails::Engine
-      engine_name "sitepoint_design"
-      isolate_namespace SitepointDesign
+      engine_name "mactech_design"
+      isolate_namespace MacTechDesign
     end
 
     Rails.application.config.assets.paths.unshift File.expand_path('../assets', __FILE__)
@@ -38,16 +38,16 @@ after_initialize do
   end
   # SP customisation: add SiteCustomization to add in crawler links
   SiteCustomization.find_or_create_by({
-    name: "SitePoint Crawler links",
+    name: "MacTech Crawler links",
     header: '<noscript>
-      <a href="http://www.sitepoint.com">Articles</a>
-      <a href="https://learnable.com/topics/all/book">Books</a>
-      <a href="https://learnable.com/topics/all/course">Courses</a>
+      <a href="http://www.mactech.com">MacTech.com</a>
+      <a href="http://pro.mactech.com/">MacTech Pro Events</a>
+      <a href="http://www.mactech.com/conference/">MacTech Conference</a>
     </noscript>',
     mobile_header: '<noscript>
-      <a href="http://www.sitepoint.com">Articles</a>
-      <a href="https://learnable.com/topics/all/book">Books</a>
-      <a href="https://learnable.com/topics/all/course">Courses</a>
+      <a href="http://www.mactech.com">MacTech.com</a>
+      <a href="http://pro.mactech.com/">MacTech Pro Events</a>
+      <a href="http://www.mactech.com/conference/">MacTech Conference</a>
     </noscript>',
     enabled: true,
     user_id: User.first.id
@@ -61,7 +61,7 @@ register_asset("stylesheets/common/foundation/variables.scss", :variables)
 #  Media-queried rules for fontsizes
 #  NOTE: Helps reduce the line count in module stylesheets
 #        Helps keep number of different sizes in check
-register_asset "stylesheets/sitepoint/typography.scss"
+register_asset "stylesheets/mactech/typography.scss"
 #  Make badges wide by default
 #  Change category dropdown caret style
 #  Don't display parent category
